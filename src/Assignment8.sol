@@ -21,7 +21,7 @@ contract Assignment8 is ERC721URIStorage, Ownable {
     // restrict this function to be called only by the owner
     // Hint: You can use OpenZeppelin Ownable contract imported above
 
-    function mintNFT() external onlyOwner {
+    function mintNFT(string memory tokenURI) external onlyOwner {
         uint tokenId = _tokenIdCounter;
         // call _mint to mint a new nft to the function caller
         _mint(msg.sender, tokenId);
