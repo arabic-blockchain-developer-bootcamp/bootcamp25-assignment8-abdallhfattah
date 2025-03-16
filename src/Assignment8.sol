@@ -14,7 +14,7 @@ contract Assignment8 is ERC721URIStorage, Ownable {
     constructor(
         string memory name,
         string memory symbol
-    ) ERC721(name, symbol) {}
+    ) ERC721(name, symbol) Ownable(msg.sender) {}
 
     // make this function visibility: external
     // pass string json uri parameter
